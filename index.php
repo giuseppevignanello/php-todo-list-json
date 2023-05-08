@@ -30,8 +30,9 @@ Abilitare l’eliminazione di un task -->
 
 <body>
 
+    <div id="app">
 
-
+    </div>
 
 </body>
 
