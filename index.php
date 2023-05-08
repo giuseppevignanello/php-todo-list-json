@@ -36,6 +36,9 @@ Abilitare l’eliminazione di un task -->
                 {{task}}
             </li>
         </ul>
+        <!-- to do list  -->
+        <input class="form-control" type="text" placeholder="Insert a new task" aria-label="default input example"
+            v-model="newTask" @keyup.enter="addTask">
     </div>
 
 </body>

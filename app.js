@@ -4,10 +4,17 @@ createApp({
   data() {
     return {
         api_url: "./getTask.php",
-        tasks: []
+        tasks: [], 
+        newTask: ""
     }
   }, 
+  methods: {
+    addTask() {
+        this.tasks.push(this.newTask)
+    }
+  },
    mounted() {
+    //call the API
     axios 
     .get(this.api_url)
     .then(response => {
