@@ -37,7 +37,11 @@ Abilitare l’eliminazione di un task -->
         <div class="card container p-3">
             <ul>
                 <li v-for="task in tasks">
-                    {{task}}
+                    <div class="d-inline" :class="{completed: task.status }">
+                        {{task.text}}
+                    </div>
+                    <span click="taskDone">✅</span>
+                    <span @click="deleteTask"> ❌</span>
                 </li>
             </ul>
             <!-- to do list  -->

@@ -27,12 +27,14 @@ createApp({
         });
       this.newTask = "";
     },
+    taskDone() {},
   },
   mounted() {
     //call the API
     axios
       .get(this.api_get_url)
       .then((response) => {
+        console.log(response);
         this.tasks = response.data;
       })
       .catch((error) => {
