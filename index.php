@@ -31,7 +31,11 @@ Abilitare l’eliminazione di un task -->
 <body>
 
     <div id="app">
-
+        <ul>
+            <li v-for="task in tasks">
+                {{task}}
+            </li>
+        </ul>
     </div>
 
 </body>
