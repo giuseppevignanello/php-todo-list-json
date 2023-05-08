@@ -1,7 +1,10 @@
 <?php
 
 if (!empty($_POST['newTask'])) {
-    $newTask = ($_POST['newTask']);
+    $newTask = [
+        'text' => ($_POST['newTask']),
+        'status' => false
+    ];
 };
 
 
@@ -10,7 +13,6 @@ $tasks_string = file_get_contents('tasks.json');
 
 //decode the json file 
 $tasks = json_decode($tasks_string, true);
-
 //add the new task 
 array_push($tasks, $newTask);
 

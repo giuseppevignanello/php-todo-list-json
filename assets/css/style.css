@@ -5,3 +5,8 @@ body {
 .completed {
     text-decoration: line-through;
 }
+
+.content {
+    height: 50%;
+    margin: auto;
+}
