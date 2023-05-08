@@ -29,7 +29,6 @@ createApp({
     },
     taskDone(index) {
       this.tasks[index].status = !this.tasks[index].status;
-      console.log(this.tasks);
     },
   },
   mounted() {
