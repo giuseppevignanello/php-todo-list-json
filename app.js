@@ -11,8 +11,6 @@ createApp({
   },
   methods: {
     addTask() {
-      this.tasks.push(this.newTask);
-
       const data = {
         newTask: this.newTask,
       };
@@ -22,7 +20,7 @@ createApp({
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((response) => {
-          console.log(response);
+          this.tasks = response.data;
         })
         .catch((error) => {
           console.error(error.message);
@@ -35,7 +33,6 @@ createApp({
     axios
       .get(this.api_get_url)
       .then((response) => {
-        console.log(response);
         this.tasks = response.data;
       })
       .catch((error) => {
