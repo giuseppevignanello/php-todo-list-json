@@ -5,6 +5,7 @@ createApp({
     return {
       api_get_url: "./getTask.php",
       api_post_url: "./postTasks.php",
+      api_changeStatus_url: "./changeStatus.php",
       tasks: [],
       newTask: "",
     };
@@ -28,7 +29,20 @@ createApp({
       this.newTask = "";
     },
     taskDone(index) {
-      this.tasks[index].status = !this.tasks[index].status;
+      //   this.tasks[index].status = !this.tasks[index].status;
+      const data = {
+        taskIndex: index,
+      };
+      axios
+        .post(this.api_changeStatus_url, data, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then((response) => {
+          this.tasks = response.data;
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
     },
   },
   mounted() {

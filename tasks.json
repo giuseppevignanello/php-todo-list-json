@@ -1,5 +1,1 @@
-[
-  { "text": "Write a blog post", "status": true },
-  { "text": "Read the book for the publisher", "status": false },
-  { "text": "Do the Boolean Excercise", "status": false }
-]
+[{"text":"Write a blog post","status":true},{"text":"Read the book for the publisher","status":false},{"text":"Do the Boolean Excercise","status":true}]
