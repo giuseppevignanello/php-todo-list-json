@@ -15,4 +15,4 @@ file_put_contents('tasks.json', $new_tasks_string);
 
 
 header('Content-Type: application/json');
-echo json_encode($new_tasks_string);
+echo ($new_tasks_string);
