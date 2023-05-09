@@ -14,21 +14,25 @@ createApp({
   },
   methods: {
     addTask() {
-      const data = {
-        newTask: this.newTask,
-      };
+      if (this.newTask.trim() == "") {
+        alert("Plese write something");
+      } else {
+        const data = {
+          newTask: this.newTask,
+        };
 
-      axios
-        .post(this.api_post_url, data, {
-          headers: { "Content-Type": "multipart/form-data" },
-        })
-        .then((response) => {
-          this.tasks = response.data;
-        })
-        .catch((error) => {
-          console.error(error.message);
-        });
-      this.newTask = "";
+        axios
+          .post(this.api_post_url, data, {
+            headers: { "Content-Type": "multipart/form-data" },
+          })
+          .then((response) => {
+            this.tasks = response.data;
+          })
+          .catch((error) => {
+            console.error(error.message);
+          });
+        this.newTask = "";
+      }
     },
     taskDone(index) {
       //   this.tasks[index].status = !this.tasks[index].status;
