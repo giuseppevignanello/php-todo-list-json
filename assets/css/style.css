@@ -62,3 +62,10 @@ footer {
 
 }
 
+.button {
+    border-radius: 8px;
+    font-size: 14px;
+    border: none;
+    padding: 4px;
+}
+
