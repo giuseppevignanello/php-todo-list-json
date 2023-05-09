@@ -68,7 +68,7 @@ createApp({
       axios
         .get(this.api_deleteAllTasks_url)
         .then((response) => {
-          this.tasks = response.data;
+          this.tasks = [];
         })
         .catch((error) => {
           console.error(error.message);
