@@ -50,7 +50,13 @@ Abilitare l’eliminazione di un task -->
                     <!-- to do list  -->
                     <input class="form-control" type="text" placeholder="Insert a new task"
                         aria-label="default input example" v-model="newTask" @keyup.enter="addTask">
-                    <button class="btn bg_main btn-sm mt-2 w-25 text-white" @click="addTask"> Click </button>
+                    <div class="buttons d-flex">
+                        <button class="btn bg_main btn-sm mt-2 w-25 text-white me-2" @click="addTask"> Add
+                        </button>
+                        <button class="btn btn-sm mt-2 w-25 text-white bg_tertiary" @click="deleteAllTasks"> Delete All
+                        </button>
+                    </div>
+
                     <!-- input field  -->
                 </div>
 
