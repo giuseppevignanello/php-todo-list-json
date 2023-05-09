@@ -1,12 +1,40 @@
-body {
-    font-family: 'Poppins', sans-serif;
+:root {
+    --main: #001F42; 
+    --secondary: #7C8F0E; 
+    --tertiary: #8F190E; 
 }
 
+/* #region utilities */
+
+.bg_main {
+    background-color: var(--main);
+}
+.bg_secondary {
+    background-color: var(--secondary);
+}
+.bg_tertiary {
+    background-color: var(--tertiary);
+}
+
+/* #endregion utilities */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary);
+}
+
+main {
+    height: 80vh;
+}
+
+.container {
+    height: 100%;
+}
 
 .completed {
     text-decoration: line-through;
 } 
 
-li {
-    color: red;
+.content {
+    margin-top: 4rem;
 }

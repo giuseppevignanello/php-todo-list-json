@@ -1,3 +1,4 @@
-<header class="bg-warning">
-    <h1 class="text-center py-2"> To do list</h1>
+<header class="bg_main text-white">
+    <h1 class="text-center pt-2"> To Do List</h1>
+    <h5 class="text-center py-2">with Vue and PHP</h5>
 </header>
