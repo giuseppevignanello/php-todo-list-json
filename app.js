@@ -6,6 +6,7 @@ createApp({
       api_get_url: "./getTask.php",
       api_post_url: "./postTasks.php",
       api_changeStatus_url: "./changeStatus.php",
+      api_deleteTask_url: "./deleteTask.php",
       tasks: [],
       newTask: "",
     };
@@ -35,6 +36,22 @@ createApp({
       };
       axios
         .post(this.api_changeStatus_url, data, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then((response) => {
+          this.tasks = response.data;
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    },
+    deleteTask(index) {
+      const data = {
+        deletedTask: index,
+      };
+
+      axios
+        .post(this.api_deleteTask_url, data, {
           headers: { "Content-Type": "multipart/form-data" },
         })
         .then((response) => {

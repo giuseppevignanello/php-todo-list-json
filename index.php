@@ -42,7 +42,7 @@ Abilitare l’eliminazione di un task -->
                             {{task.text}}
                         </div>
                         <span @click="taskDone(index)">✅</span>
-                        <span> ❌</span>
+                        <span @click="deleteTask(index)"> ❌</span>
                     </li>
                 </ul>
                 <!-- to do list  -->
