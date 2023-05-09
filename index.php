@@ -34,23 +34,26 @@ Abilitare l’eliminazione di un task -->
 
     <div id="app">
         <?php include __DIR__ . "/header.php" ?>
-        <div class="container">
-            <div class="card content p-3">
-                <ul>
-                    <li v-for="(task, index) in tasks">
-                        <div class="d-inline" :class="{completed: task.status}">
-                            {{task.text}}
-                        </div>
-                        <span @click="taskDone(index)">✅</span>
-                        <span @click="deleteTask(index)"> ❌</span>
-                    </li>
-                </ul>
-                <!-- to do list  -->
-                <input class="form-control" type="text" placeholder="Insert a new task" aria-label="default input example" v-model="newTask" @keyup.enter="addTask">
-                <button class="btn btn-primary btn-sm mt-2 w-25" @click="addTask"> Click </button>
-            </div>
+        <main>
+            <div class="container">
+                <div class="card content p-3">
+                    <ul>
+                        <li v-for="(task, index) in tasks">
+                            <div class="d-inline" :class="{completed: task.status}">
+                                {{task.text}}
+                            </div>
+                            <button class="btn" @click="taskDone(index)">✅</button>
+                            <button class="btn" @click="deleteTask(index)"> ❌</button>
+                        </li>
+                    </ul>
+                    <!-- to do list  -->
+                    <input class="form-control" type="text" placeholder="Insert a new task" aria-label="default input example" v-model="newTask" @keyup.enter="addTask">
+                    <button class="btn btn-primary btn-sm mt-2 w-25" @click="addTask"> Click </button>
+                    <!-- input field  -->
+                </div>
 
-        </div>
+            </div>
+        </main>
 
     </div>
 
