@@ -1,6 +1,7 @@
 <?php
 
-if (!empty($_POST['newTask'])) {
+
+if (isset($_POST['newTask'])) {
     $newTask = [
         'text' => ($_POST['newTask']),
         'status' => false
