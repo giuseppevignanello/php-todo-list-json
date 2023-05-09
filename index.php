@@ -56,7 +56,7 @@ Abilitare l’eliminazione di un task -->
 
             </div>
         </main>
-
+        <?php include __DIR__ . "/footer.php" ?>
     </div>
 
 </body>
